@@ -12,6 +12,11 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask('sayhello')
 app.config.from_pyfile('settings.py')
+
+# 第二种配置方式
+# app = Flask('sayhello', instance_relative_config=True)
+# app.config.from_pyfile('config.py')
+
 app.jinja_env.trim_blocks = True
 app.jinja_env.lstrip_blocks = True
 
